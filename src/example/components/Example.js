@@ -9,6 +9,8 @@ export default class Example extends PureComponent {
     random: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,
+
+    t: PropTypes.func.isRequired
   }
 
   handleInput = (event) => {
@@ -19,7 +21,7 @@ export default class Example extends PureComponent {
     const { count, text, random, onClick } = this.props
     return (
       <div>
-        <h2>Click count: <b>{ count }</b></h2>
+        <h2>{ this.props.t('clickCount') }: <b>{ count }</b></h2>
         <button onClick={ onClick }>Dont click!</button>
         <hr />
         <h2>Text: <b>{ text }</b></h2>
