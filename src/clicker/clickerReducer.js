@@ -1,5 +1,5 @@
 import { createReducer } from 'redux-create-reducer'
-import * as at from './clickerConstants'
+import * as at from 'src/clicker/clickerConstants'
 
 const initialState = {
   count: 0

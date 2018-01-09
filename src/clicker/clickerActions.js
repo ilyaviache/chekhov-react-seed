@@ -1,3 +1,3 @@
-import * as at from './clickerConstants'
+import * as at from 'src/clicker/clickerConstants'
 
 export const increment = () => ({ type: at.INCREMENT })

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { getCount } from '../clickerSelectors'
-import { increment } from '../clickerActions'
+import { getCount } from 'src/clicker/clickerSelectors'
+import { increment } from 'src/clicker/clickerActions'
 import Clicker from '../components/Clicker'
 
 const mapStateToProps = state => ({
