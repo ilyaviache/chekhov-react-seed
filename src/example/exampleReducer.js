@@ -4,7 +4,8 @@ import * as at from 'src/example/exampleConstants'
 const initialState = {
   count: 0,
   text: 'Hi!',
-  random: Math.random()
+  isTextDefault: true,
+  random: 0
 }
 
 export default createReducer(initialState, {
@@ -18,5 +19,7 @@ export default createReducer(initialState, {
   [at.SET_RANDOM]: (state, action) => ({
     ...state,
     random: action.payload.random
-  })
+  }),
+
+  [at.SET_TEXT_CUSTOM]: state => ({ ...state, isTextDefault: false })
 })

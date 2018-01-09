@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bdVaJa knYxsw"
+>
+  <h2>
+    
+    : 
+    <b>
+      0
+    </b>
+  </h2>
+  <button
+    className="sc-bwzfXH ePvrkd"
+    onClick={[Function]}
+  >
+    Dont click!
+  </button>
+  <hr />
+  <h2>
+    Text: 
+    <b>
+      
+    </b>
+  </h2>
+  <input
+    className="sc-htpNat cEZYLy"
+    onChange={[Function]}
+    value=""
+  />
+  <hr />
+  <h2>
+    Saga random value: 
+    <b>
+      0.0000
+    </b>
+  </h2>
+  <hr />
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Main
+  </a>
+</div>
+`;

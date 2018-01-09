@@ -13,3 +13,4 @@ export const updateRandom = random => ({
     random
   }
 })
+export const setTextCustom = () => ({ type: at.SET_TEXT_CUSTOM })
