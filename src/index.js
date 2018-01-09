@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import { enableBatching } from 'redux-batched-actions';
 import rootReducer from './rootReducer'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
@@ -15,7 +16,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 )
