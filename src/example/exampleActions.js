@@ -7,3 +7,9 @@ export const changeText = text => ({
     text
   }
 })
+export const updateRandom = random => ({
+  type: at.SET_RANDOM,
+  payload: {
+    random
+  }
+})

@@ -6,8 +6,9 @@ export default class Example extends PureComponent {
   static propTypes = {
     count: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
+    random: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   }
 
   handleInput = (event) => {
@@ -15,7 +16,7 @@ export default class Example extends PureComponent {
   }
 
   render() {
-    const { count, text, onClick } = this.props
+    const { count, text, random, onClick } = this.props
     return (
       <div>
         <h2>Click count: <b>{ count }</b></h2>
@@ -23,6 +24,8 @@ export default class Example extends PureComponent {
         <hr />
         <h2>Text: <b>{ text }</b></h2>
         <input onChange={ this.handleInput } value={ text } />
+        <hr />
+        <h2>Saga random value: <b>{ random.toFixed(4) }</b></h2>
         <hr />
         <Link to="/">Main</Link>
       </div>

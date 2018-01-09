@@ -3,7 +3,8 @@ import * as at from 'src/example/exampleConstants'
 
 const initialState = {
   count: 0,
-  text: 'Hi!'
+  text: 'Hi!',
+  random: Math.random()
 }
 
 export default createReducer(initialState, {
@@ -12,5 +13,10 @@ export default createReducer(initialState, {
   [at.CHANGE_TEXT]: (state, action) => ({
     ...state,
     text: action.payload.text
+  }),
+
+  [at.SET_RANDOM]: (state, action) => ({
+    ...state,
+    random: action.payload.random
   })
 })
