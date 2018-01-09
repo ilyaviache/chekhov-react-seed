@@ -1,6 +1,32 @@
 import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+
+const Wrapper = styled.div`
+  width: 400px;
+  margin: 0 auto;
+`;
+
+const Button = styled.button`
+  background: transparent;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+const Input = styled.input`
+  background: transparent;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
 
 export default class Example extends PureComponent {
   static propTypes = {
@@ -20,17 +46,17 @@ export default class Example extends PureComponent {
   render() {
     const { count, text, random, onClick } = this.props
     return (
-      <div>
+      <Wrapper>
         <h2>{ this.props.t('clickCount') }: <b>{ count }</b></h2>
-        <button onClick={ onClick }>Dont click!</button>
+        <Button onClick={ onClick }>Dont click!</Button>
         <hr />
         <h2>Text: <b>{ text }</b></h2>
-        <input onChange={ this.handleInput } value={ text } />
+        <Input onChange={ this.handleInput } value={ text } />
         <hr />
         <h2>Saga random value: <b>{ random.toFixed(4) }</b></h2>
         <hr />
         <Link to="/">Main</Link>
-      </div>
+      </Wrapper>
     );
   }
 }
