@@ -7,13 +7,13 @@ i18n.init({
   debug: true,
 
   interpolation: {
-    escapeValue: false, // not needed for react!!
+    escapeValue: false // not needed for react!!
   },
 
   resources: {
     en: { translation: en },
     ru: { translation: ru }
-  },
+  }
 })
 
 export default i18n

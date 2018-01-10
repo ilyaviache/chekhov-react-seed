@@ -7,16 +7,16 @@ import logo from './logo.svg'
 import './App.css'
 
 export class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{ this.props.t('title') }</h1>
-          <button onClick={() => { i18n.changeLanguage('en'); }}>
+          <button onClick={() => { i18n.changeLanguage('en') }}>
             en
           </button>
-          <button onClick={() => { i18n.changeLanguage('ru'); }}>
+          <button onClick={() => { i18n.changeLanguage('ru') }}>
             ru
           </button>
         </header>
@@ -32,8 +32,8 @@ export class App extends Component {
           )} />
         </Switch>
       </div>
-    );
+    )
   }
 }
 
-export default translate()(App);
+export default translate()(App)

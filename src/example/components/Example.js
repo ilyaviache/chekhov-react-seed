@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Wrapper = styled.div`
   width: 400px;
   margin: 0 auto;
-`;
+`
 
 const Button = styled.button`
   background: transparent;
@@ -16,7 +16,7 @@ const Button = styled.button`
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
-`;
+`
 
 const Input = styled.input`
   background: transparent;
@@ -26,7 +26,7 @@ const Input = styled.input`
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
-`;
+`
 
 export default class Example extends PureComponent {
   static propTypes = {
@@ -43,7 +43,7 @@ export default class Example extends PureComponent {
     this.props.onChange(event.currentTarget.value)
   }
 
-  render() {
+  render () {
     const { count, text, random, onClick } = this.props
     return (
       <Wrapper>
@@ -57,7 +57,6 @@ export default class Example extends PureComponent {
         <hr />
         <Link to="/">Main</Link>
       </Wrapper>
-    );
+    )
   }
 }
-
