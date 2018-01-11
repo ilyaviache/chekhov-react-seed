@@ -47,8 +47,8 @@ export default class Example extends PureComponent {
     const { count, text, random, onClick } = this.props
     return (
       <Wrapper>
-        <h2>{ this.props.t('clickCount') }: <b>{ count }</b></h2>
-        <Button onClick={ onClick }>Dont click!</Button>
+        <h2>{ this.props.t('clickCount') }: <b id="click-counter">{ count }</b></h2>
+        <Button id="counter" onClick={ onClick }>Dont click!</Button>
         <hr />
         <h2>Text: <b>{ text }</b></h2>
         <Input onChange={ this.handleInput } value={ text } />

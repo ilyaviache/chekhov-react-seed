@@ -7,12 +7,15 @@ exports[`renders correctly 1`] = `
   <h2>
     
     : 
-    <b>
+    <b
+      id="click-counter"
+    >
       0
     </b>
   </h2>
   <button
     className="sc-bwzfXH ePvrkd"
+    id="counter"
     onClick={[Function]}
   >
     Dont click!
