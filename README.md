@@ -1,4 +1,4 @@
-# Sizle Editor
+# App
 
 To start the dev server:
 
