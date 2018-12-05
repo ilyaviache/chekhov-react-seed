@@ -1,39 +1,40 @@
-import React, { Component, Fragment } from 'react'
-import { translate } from 'react-i18next'
-import { Switch, Route, Link } from 'react-router-dom'
-import ExampleContainer from 'src/example/containers/ExampleContainer'
-import i18n from 'src/utils/i18n'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+import { withRouter } from 'react-router-dom'
+
+import theme from './utils/theme'
+
+import Router from 'src/router'
 
 export class App extends Component {
-  render () {
+
+  componentWillMount() {
+    // this.props.loadSession()
+  }
+
+  render() {
+    const { isAppInitializing } = this.props
+
+    // TODO: Add loader
+    if (isAppInitializing) {
+      return <div></div>
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">{ this.props.t('title') }</h1>
-          <button onClick={() => { i18n.changeLanguage('en') }}>
-            en
-          </button>
-          <button onClick={() => { i18n.changeLanguage('ru') }}>
-            ru
-          </button>
-        </header>
-        <Switch>
-          <Route path="/example" component={ ExampleContainer } />
-          <Route path="/" render={ props => (
-            <Fragment>
-              <p className="App-intro">
-                To get started, edit <code>src/App.js</code> and save to reload.
-              </p>
-              <Link to="/example">Route example</Link>
-            </Fragment>
-          )} />
-        </Switch>
-      </div>
+      <ThemeProvider theme={theme}>
+        <Router />
+      </ThemeProvider>
     )
   }
 }
 
-export default translate()(App)
+const mapStateToProps = () => ({
+  isAppInitializing: false
+})
+
+const mapDispatchToProps = {
+  
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

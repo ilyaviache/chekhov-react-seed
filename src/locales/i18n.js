@@ -16,4 +16,10 @@ i18n.init({
   }
 })
 
+i18n.locale = 'en'
+
+export function t(name, params = {}) {
+  return i18n.t(name, params)
+}
+
 export default i18n

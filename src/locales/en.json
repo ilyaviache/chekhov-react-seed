@@ -1,4 +1,15 @@
 {
-  "title": "Welcome to React",
-  "clickCount": "Click count"
+  "inputs": {
+    "errors": {
+      "email": "Invalid Email",
+      "required": "Required field",
+      "match": "Values doesn't match",
+      "steps": "The amount of done and undone steps can not exceed the number of announced steps",
+      "integer": "Value must be integer number",
+      "sale": "Value must be less than 100",
+      "member": "You must fill at least 1 team member",
+      "bigImage": "Image size must be less than 2Mb",
+      "icoDates": "You must fill at least one of the periods"
+    }
+  }
 }

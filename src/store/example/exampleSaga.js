@@ -1,7 +1,6 @@
-import { fork, takeEvery, put } from 'redux-saga/effects'
+import { fork, put } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import * as at from 'src/example/exampleConstants'
-import { updateRandom, setTextCustom } from 'src/example/exampleActions'
+import { setTextCustom, updateRandom } from 'src/store/example'
 
 function * updateRandomSaga () {
   while (true) {
@@ -16,5 +15,5 @@ export function * setTextCustomSaga () {
 
 export default function * () {
   yield fork(updateRandomSaga)
-  yield takeEvery(at.CHANGE_TEXT, setTextCustomSaga)
+  // yield takeEvery(SETTEXTCUSTOM, setTextCustomSaga)
 }

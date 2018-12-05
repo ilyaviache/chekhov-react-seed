@@ -12,7 +12,7 @@ describe('/ (Example Page)', () => {
   })
 
   it('it show click counter', async () => {
-    await page.click('a[href="/example"]')
+    await page.click('a[href="/icos"]')
 
     const defaultCounter = await page.evaluate(() => (
       document.querySelector('#click-counter').textContent
